@@ -6,8 +6,7 @@ strategies = [
   "BespokeGenerator", 
   "SpecificationBasedGenerator",
   "TypeBasedGenerator",
-  "TypeBasedFuzzer",
-  "NewGenerator"]
+  "TypeBasedFuzzer"]
   
 mutations = [
   "shift_var_none",
