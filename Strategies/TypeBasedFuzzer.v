@@ -7,13 +7,13 @@ Import MonadNotation.
 
 From STLC Require Import Impl Spec.
 
-Derive (Arbitrary, Fuzzy) for Typ.
+Derive Instance(Arbitrary, Fuzzy) for Typ.
 
-Derive (Sized, Fuzzy) for nat.
+Derive Instance(Sized, Fuzzy) for nat.
 
-Derive (Fuzzy) for bool.
+Derive Instance(Fuzzy) for bool.
 
-Derive (Arbitrary, Fuzzy) for Expr.
+Derive Instance(Arbitrary, Fuzzy) for Expr.
 
 Axiom num_tests : nat. Extract Constant num_tests => "max_int".
 

@@ -7,5 +7,5 @@ Import MonadNotation.
 
 From STLC Require Import Impl Spec.
 
-Derive (Arbitrary) for Typ.
-Derive (Arbitrary) for Expr.
+Derive Instance(Arbitrary) for Typ.
+Derive Instance(Arbitrary) for Expr.

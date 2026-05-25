@@ -7,8 +7,8 @@ Import MonadNotation.
 
 From STLC Require Import Impl Spec.
 
-Derive (Arbitrary) for Typ.
-Derive (Arbitrary) for Expr.
+Derive Instance(Arbitrary) for Typ.
+Derive Instance(Arbitrary) for Expr.
 
 Inductive bind : Ctx -> nat -> Typ -> Prop :=
 | BindNow   : forall tau env, bind (tau :: env) 0 tau
@@ -36,7 +36,7 @@ Inductive typing (G : Ctx) : Expr -> Typ -> Prop :=
 
 #[export] Instance dec_type (t1 t2 : Typ) : Dec (t1 = t2).
 Proof. dec_eq. Defined.
-Derive Arbitrary for Typ.
+Derive Instance Arbitrary for Typ.
 
 Fixpoint genVar' (ctx: Ctx) (t: Typ) (p: nat) (r: list nat) : list nat :=
   match ctx with
